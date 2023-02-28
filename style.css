@@ -65,3 +65,11 @@ body{
 #delete, #clear{
     width:140px;
 }
+
+#equals{
+    background-color: lightgreen;
+}
+
+#clear{
+    background-color:lightcoral;
+}

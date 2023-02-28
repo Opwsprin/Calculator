@@ -32,6 +32,7 @@ body{
     border-style:solid;
     border-color:black;
     margin:20px 0;
+    box-shadow:inset 4px 4px lightblue;
 }
 
 .real-time-display{

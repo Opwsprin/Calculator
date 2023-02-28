@@ -33,8 +33,13 @@ body{
 }
 
 .real-time-display{
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#first-number-display, #second-number-display, #operand-display{
     padding:6px;
-    text-align:end;
     font-size:22px;
 }
 

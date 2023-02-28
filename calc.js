@@ -30,7 +30,9 @@ operandButtons.forEach((button)=>{
         if(secondNumberDisplay.textContent!=''){
             //console.log(firstNumber, secondNumber, operand);
             resultDisplay.textContent=evaluate(firstNumber, secondNumber, operand);
-            firstNumberDisplay.textContent=resultDisplay.textContent;
+            if(resultDisplay.textContent!=''){
+                firstNumberDisplay.textContent=resultDisplay.textContent;
+            }
             operand=button.id;
             operandDisplay.textContent=button.textContent;
             secondNumberDisplay.textContent='';
@@ -47,6 +49,26 @@ equalsButton.addEventListener('click', ()=>{
     defineDisplay();
     resultDisplay.textContent=evaluate(firstNumber, secondNumber, operand);
 })
+
+deleteButton.addEventListener('click', ()=>{
+    if(secondNumberDisplay.textContent!=''){
+        secondNumberDisplay.textContent=secondNumberDisplay.textContent.slice(0,-1);
+    } else if(operandDisplay.textContent!=''){
+        operandDisplay.textContent='';
+    } else if(firstNumberDisplay.textContent!=''){
+        firstNumberDisplay.textContent=firstNumberDisplay.textContent.slice(0,-1);
+    } else return;
+})
+
+decimalButton.addEventListener('click', ()=>{
+    if((secondNumberDisplay.textContent!='')&&(secondNumberDisplay.textContent.indexOf('.')<0)){
+        secondNumberDisplay.textContent+=decimalButton.textContent;
+    } else if (operandDisplay.textContent!=''){
+        return;
+    } else if((firstNumberDisplay.textContent!='')&&(firstNumberDisplay.textContent.indexOf('.')<0)){
+        firstNumberDisplay.textContent+=decimalButton.textContent;
+    }
+});
 
 clearButton.addEventListener('click', clearAll);
 

@@ -7,6 +7,8 @@ Did most of the extra credit points, but for the keyboard support. May return to
 
 My calculator looks better than the most voted solution on TOP! :D
 
-One bug that is bothering me: if I type large enough numbers, hte digits extend beyond the calculator. Should be fixable with some clever css wrapping, but haven't done it yet.
+One bug that is bothering me: if I type large enough numbers, the digits extend beyond the calculator. Should be fixable with some clever css wrapping, but haven't done it yet.
 
 I wonder if making the buttons into objects would be better / more efficient / more readable. Will look into it in the future (that is probably a lie - I don't think I will return to this to refactor the whole code).
+
+UPDATE 1: Ok, I addressed the bug that was bothering me and the digits no longer extend. Instead, the calculator screen expands vertically to accommodate this. The operations look ugly though - this is where my workaround with three screens shows its limits. Oh well...
